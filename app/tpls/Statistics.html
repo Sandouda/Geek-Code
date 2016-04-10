@@ -1,0 +1,169 @@
+<div class="row">
+	<div class="col-md-6">
+		
+		<!-- Default panel -->
+		<div class="panel panel-default"><!-- Add class "collapsed" to minimize the panel -->
+			<div class="panel-heading">
+				<h3 class="panel-title">Number of service published by each company </h3>
+				
+				<div class="panel-options">
+					<a href="">
+						<i class="linecons-cog"></i>
+					</a>
+					
+					<a href="" data-toggle="panel">
+						<span class="collapse-icon">&ndash;</span>
+						<span class="expand-icon">+</span>
+					</a>
+					
+					<a href="" data-toggle="reload">
+						<i class="fa-rotate-right"></i>
+					</a>
+					
+					<a href="" data-toggle="remove">
+						&times;
+					</a>
+				</div>
+			</div>
+			
+			<div class="panel-body">
+			<div  ng-controller="BaseCtrl">
+                        <canvas id="base" class="chart-base" chart-type="type"
+                                chart-data="data" chart-labels="labels" chart-legend="true">
+                        </canvas>
+                    </div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="col-md-6">
+		
+		<!-- Bordered + shadow panel -->
+		<div class="panel panel-default panel-border panel-shadow"><!-- Add class "collapsed" to minimize the panel -->
+			<div class="panel-heading">
+				<h3 class="panel-title">Number of Member and company registered over the years </h3>
+				
+				<div class="panel-options">
+					<a href="">
+						<i class="linecons-cog"></i>
+					</a>
+					
+					<a href="" data-toggle="panel">
+						<span class="collapse-icon">&ndash;</span>
+						<span class="expand-icon">+</span>
+					</a>
+					
+					<a href="" data-toggle="reload">
+						<i class="fa-rotate-right"></i>
+					</a>
+					
+					<a href="" data-toggle="remove">
+						&times;
+					</a>
+				</div>
+			</div>
+			
+			<div class="panel-body">
+				
+				<div ng-controller="LineCtrl">
+                        <canvas id="line" class="chart chart-line" chart-data="data"
+                                chart-labels="labels" chart-legend="true" chart-series="series"
+                                chart-click="onClick" >
+                        </canvas>
+                    </div>
+
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+<div class="row">
+	<div class="col-md-6">
+		
+		<!-- Default panel -->
+		<div class="panel panel-default"><!-- Add class "collapsed" to minimize the panel -->
+			<div class="panel-heading">
+				<h3 class="panel-title">Number of Likes and comments made by the Members for  services of each company</h3>
+				
+				<div class="panel-options">
+					<a href="">
+						<i class="linecons-cog"></i>
+					</a>
+					
+					<a href="" data-toggle="panel">
+						<span class="collapse-icon">&ndash;</span>
+						<span class="expand-icon">+</span>
+					</a>
+					
+					<a href="" data-toggle="reload">
+						<i class="fa-rotate-right"></i>
+					</a>
+					
+					<a href="" data-toggle="remove">
+						&times;
+					</a>
+				</div>
+			</div>
+			
+			<div class="panel-body">
+				<div class="tab-pane" ng-class="{'active': tabbed_panel_2_active == 1}" ng-controller="RadarCtrl">
+                    <canvas id="radar" class="chart chart-radar"
+                            chart-data="data" chart-labels="labels">
+                    </canvas>
+                </div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="col-md-6">
+		
+		<!-- Bordered + shadow panel -->
+		<div class="panel panel-default panel-border panel-shadow"><!-- Add class "collapsed" to minimize the panel -->
+			<div class="panel-heading">
+				<h3 class="panel-title">Number of job offer published by each company </h3>
+				
+				<div class="panel-options">
+					<a href="">
+						<i class="linecons-cog"></i>
+					</a>
+					
+					<a href="" data-toggle="panel">
+						<span class="collapse-icon">&ndash;</span>
+						<span class="expand-icon">+</span>
+					</a>
+					
+					<a href="" data-toggle="reload">
+						<i class="fa-rotate-right"></i>
+					</a>
+					
+					<a href="" data-toggle="remove">
+						&times;
+					</a>
+				</div>
+			</div>
+			
+			<div class="panel-body">
+			<div ng-controller ="DoughnutCtrl" > 
+				<canvas id="doughnut" class="chart chart-doughnut"
+  chart-data="data" chart-labels="labels">
+</canvas
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+
+
+
+

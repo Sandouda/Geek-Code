@@ -1,0 +1,82 @@
+<div class="row">
+
+
+
+
+            <!-- Bordered panel -->
+            <div class="panel panel-default panel-border">
+                <div class="panel-heading">
+                   Details
+                </div>
+
+                <div class="panel-body">
+
+                    <h1>
+                        Label :
+
+                        <small>Secondary text</small>
+                    </h1>
+
+                    <h1>
+                        Description :
+
+                        <small>Secondary text</small>
+                    </h1>
+                    <h1>
+                        Codebar :
+
+                        <small>Secondary text</small>
+                    </h1>
+                </div>
+            </div>
+
+                <!-- Tabbed panel -->
+
+
+
+
+
+        <!-- Tabbed panel 2 -->
+        <div ng-init="tabbed_panel_2_active = 2" class="panel panel-default panel-tabs"><!-- Add class "collapsed" to minimize the panel -->
+            <div class="panel-heading">
+                <h3 class="panel-title">Satistiques</h3>
+
+                <div class="panel-options">
+
+                    <ul class="nav nav-tabs">
+                        <li ng-class="{'active': tabbed_panel_2_active == 1}">
+                            <a href="" ng-click="tabbed_panel_2_active = 1">Statistic About Quantities Commaded over the years</a>
+                        </li>
+                        <li ng-class="{'active': tabbed_panel_2_active == 2}">
+                            <a href="" ng-click="tabbed_panel_2_active = 2">Statistic About Quantities Stored in each storeHouse</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="panel-body">
+
+                <div class="tab-content">
+
+                    <div class="tab-pane" ng-class="{'active': tabbed_panel_2_active == 1}" ng-controller="LineCtrl">
+                        <canvas id="line" class="chart chart-line" chart-data="data"
+                                chart-labels="labels" chart-legend="true" chart-series="series"
+                                chart-click="onClick" >
+                        </canvas>
+                    </div>
+
+                    <div class="tab-pane" ng-class="{'active': tabbed_panel_2_active == 2}" ng-controller="BaseCtrl">
+                        <canvas id="base" class="chart-base" chart-type="type"
+                                chart-data="data" chart-labels="labels" chart-legend="true">
+                        </canvas>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>

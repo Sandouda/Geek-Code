@@ -1,0 +1,126 @@
+
+
+	<page-title ng-if="layoutOptions.pageTitles" title="Add Member" description="Interface for adding new members using our styled forms."></page-title>
+
+
+
+<form method="post">
+	<div class="panel panel-headerless">
+		<div class="panel-body">
+
+			<div class="member-form-add-header">
+				<div class="row">
+					
+					<h1><span> C'est ici que commence l'aventure!</span></h1>
+                    <h3>Ajoutez une image, fixez votre objectif et configurez toute une foule de détails importants.</h3>
+				</div>
+			</div>
+
+
+			<div class="member-form-inputs">
+				<div class="row">
+					<label class="col-sm-3 control-label" for="field-1">Project's Title</label>
+
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="field-1" placeholder="Title will help users find your project,choose a good one! ">
+						</div>
+				</div>
+                
+                
+              
+                
+                
+
+                <div class="row">
+					<div class="col-sm-3">
+						<label class="control-label" for="logo">Image</label>
+					</div>
+					<div class="col-sm-9">
+                        
+                    <input type="file" class="form-control" id="field-4" value="No Logo Chosen">
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3">
+						<label class="control-label" for="email">Categorie</label>
+					</div>
+					
+                    
+                    
+                    <div class="col-sm-9">
+						
+						<script type="text/javascript">
+							jQuery(document).ready(function($)
+							{
+								$("#sboxit-1").selectBoxIt().on('open', function()
+								{
+									// Adding Custom Scrollbar
+									$(this).data('selectBoxSelectBoxIt').list.perfectScrollbar();
+								});
+							});
+						</script>
+						
+						<select class="form-control" id="sboxit-1">
+							<option value="art">Art</option>
+							<option value="au">Artisanat</option>
+							<option value="bd">Danse</option>
+							<option value="br">Design</option>
+							<option value="ca">Technology</option>
+							<option value="cn">Cinéma et Vidéo</option>
+							<option value="de">Gastronomie</option>
+							<option value="fr">Jeux</option>
+							<option value="gr">Journalisme</option>
+							<option value="jp">Théatre</option>
+							<option value="xk">Photographie</option>
+							<option value="nl">Sport</option>
+							
+						</select>
+							
+                    </div>	
+                    
+				</div>
+                
+                <div class="row">
+					<div class="col-sm-3">
+						<label class="control-label" for="adress">Place</label>
+					</div>
+					<div class="col-sm-9">                       
+						<input type="text" class="form-control" name="place" id="name" value="Residence Chaaben Trabelsi Aouina">
+								<span class="input-group-addon">
+									<i class="linecons-search"></i>
+								</span>
+							
+					</div>
+				</div>
+   
+                <div  class="row">
+                        <div class="col-sm-3">
+                        <label class="control-label">Description</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" cols="5" id="field-5"></textarea>
+                        </div>
+                
+                </div>
+
+
+
+
+			</div>
+            </br> </br>
+            
+             <div class="col-md-2 col-sm-4 pull-right-sm">
+
+						<div class="action-buttons">
+							<button type="submit" class="btn btn-block btn-secondary">Save Changes</button>
+							<button type="reset" class="btn btn-block btn-gray">Reset to Default</button>
+						</div>
+
+					</div>
+
+		</div>
+        
+	</div>
+   
+</form>

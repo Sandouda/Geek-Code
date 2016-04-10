@@ -1,0 +1,200 @@
+
+<page-title ng-if="layoutOptions.pageTitles" title="DataTable" description="Dynamic table variants with pagination and other controls"></page-title>
+<!-- Removing search and results count filter -->
+
+
+
+<div class="row">
+
+	<div class="col-md-12">
+
+		<tabset>
+			<tab heading="All Entreprises">
+
+				<table class="table table-hover members-table middle-align">
+					<thead>
+						<tr>
+							<th></th>
+							<th class="hidden-xs hidden-sm"></th>
+							<th>Name and Role</th>
+							<th class="hidden-xs hidden-sm">E-Mail</th>
+                            <th>Head'Off</th>
+							<th>Settings</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="user-cb">
+								<input type="checkbox" class="cbr" name="members-list[]" value="1" checked />
+							</td>
+							<td class="user-image hidden-xs hidden-sm">
+								<a ui-sref="app.Entreprises-Detail">
+									<img src="assets/images/user-1.png" class="img-circle" alt="user-pic" />
+								</a>
+							</td>
+							<td class="user-name">
+								<a href="" class="name">BDeco</a>
+								<span>Lucratif</span>
+							</td>
+							<td class="hidden-xs hidden-sm">
+								<span class="email">BDeco@BDeco.tn</span>
+							</td>
+							<td class="user-id">
+								Marsa
+							</td>
+							<td class="action-links">
+								<a ui-sref="app.Entreprises-Edit" class="edit">
+									<i class="linecons-pencil"></i>
+									Edit Profile
+								</a>
+
+								<a href="" ng-click="openModal('modal-1')" class="delete">
+									<i class="linecons-trash"></i>
+
+									Delete
+								</a>
+							</td>
+						</tr>
+                    </tbody>
+                </table>
+           </tab> 
+    
+<!-- <div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">List of Entreprises</h3>
+		
+		<div class="panel-options">
+			<a href="" data-toggle="panel">
+				<span class="collapse-icon">&ndash;</span>
+				<span class="expand-icon">+</span>
+			</a>
+			<a href="" data-toggle="remove">
+				&times;
+			</a>
+		</div>
+	</div>
+	<div class="panel-body">
+		
+		<script type="text/javascript">
+		jQuery(document).ready(function($)
+		{
+			$("#example-2").dataTable({
+				dom: "t" + "<'row'<'col-xs-6'i><'col-xs-6'p>>",
+				aoColumns: [
+					{bSortable: false},
+					null,
+					null,
+					null,
+					null
+				],
+			});
+			
+			// Replace checkboxes when they appear
+			var $state = $("#example-2 thead input[type='checkbox']");
+			
+			$("#example-2").on('draw.dt', function()
+			{
+				cbr_replace();
+				
+				$state.trigger('change');
+			});
+			
+			// Script to select all checkboxes
+			$state.on('change', function(ev)
+			{
+				var $chcks = $("#example-2 tbody input[type='checkbox']");
+				
+				if($state.is(':checked'))
+				{
+					$chcks.prop('checked', true).trigger('change');
+				}
+				else
+				{
+					$chcks.prop('checked', false).trigger('change');
+				}
+			});
+		});
+		</script>
+		
+		<table class="table table-bordered table-striped" id="example-2">
+			<thead>
+				<tr>
+					<th>Name</th>
+                    <th>Foundation's Date</th>
+                    <th>Sector</th>
+                    <th>Head'Off</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			
+			<tbody class="middle-align">
+			
+				<tr>
+					<td>Bdeco</td>
+					<td>03/05/2016</td>
+                    <td> Decoration</td>
+                    <td>Marsa</td>
+					<td>
+						<a href="" class="btn btn-secondary btn-sm btn-icon icon-left">
+							Edit
+						</a>
+						
+						<a href="" class="btn btn-danger btn-sm btn-icon icon-left">
+							Delete
+						</a>
+						
+						<a href="" class="btn btn-info btn-sm btn-icon icon-left">
+							Profile
+						</a>
+					</td>
+				</tr>
+                <tr>
+					<td>Orange Tunisie</td>
+					<td>12/12/2008</td>
+                    <td>Telecom</td>
+                    <td>Tunis</td>
+					<td>
+						<a ui-sref="app.Entreprises-Edit" class="btn btn-secondary btn-sm btn-icon icon-left"ng-click="openModal('modal-1')">
+							Edit
+						</a>
+						
+						<a href="" class="btn btn-danger btn-sm btn-icon icon-left">
+							Delete
+						</a>
+						
+						<a href="" class="btn btn-info btn-sm btn-icon icon-left">
+							Profile
+						</a>
+					</td>
+				</tr>
+				
+				
+			</tbody>
+		</table>
+		
+	</div>
+</div>
+-->
+            
+            
+            
+<!-- Script for modal -->
+            
+            
+            
+    <script type="text/ng-template" id="modal-1">
+	<div class="modal-header">
+		<button type="button" class="close" ng-click="currentModal.close();" aria-hidden="true">&times;</button>
+		<h4 class="modal-title"> Just To make sure!</h4>
+	</div>
+	
+	<div class="modal-body">
+		Do you really want to delete this Item!
+	</div>
+	
+	<div class="modal-footer">
+		<button type="button" class="btn btn-white" ng-click="currentModal.close();">Close</button>
+		<button type="button" class="btn btn btn-red" ng-click="currentModal.dismiss();">Delete</button>
+	</div>
+</script>
+<!-- End of Modal-->

@@ -1,0 +1,117 @@
+
+
+	<page-title ng-if="layoutOptions.pageTitles" title="DataTable" description="Dynamic table variants with pagination and other controls"></page-title>
+
+
+
+<!-- Basic Setup -->
+
+
+
+<!-- Removing search and results count filter -->
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">List Of Candidacies</h3>
+		
+		<div class="panel-options">
+			<a href="" data-toggle="panel">
+				<span class="collapse-icon">&ndash;</span>
+				<span class="expand-icon">+</span>
+			</a>
+			<a href="" data-toggle="remove">
+				&times;
+			</a>
+		</div>
+	</div>
+	<div class="panel-body">
+        <!--Test code-->
+    <!--ENd od Test code-->
+		<script type="text/javascript">
+		jQuery(document).ready(function($)
+		{
+			$("#example-2").dataTable({
+				dom: "t" + "<'row'<'col-xs-6'i><'col-xs-6'p>>",
+				aoColumns: [
+					{bSortable: false},
+					null,
+					null,
+					null,
+					null
+				],
+			});
+			
+			// Replace checkboxes when they appear
+			var $state = $("#example-2 thead input[type='checkbox']");
+			
+			$("#example-2").on('draw.dt', function()
+			{
+				cbr_replace();
+				
+				$state.trigger('change');
+			});
+			
+			// Script to select all checkboxes
+			$state.on('change', function(ev)
+			{
+				var $chcks = $("#example-2 tbody input[type='checkbox']");
+				
+				if($state.is(':checked'))
+				{
+					$chcks.prop('checked', true).trigger('change');
+				}
+				else
+				{
+					$chcks.prop('checked', false).trigger('change');
+				}
+			});
+		});
+		</script>   
+       
+		
+		<table class="table table-bordered table-striped" id="example-2">
+			<thead>
+				<tr>
+					<th class="no-sorting">
+						<input type="checkbox" class="cbr">
+					</th>
+					<th>Student Name</th>
+					<th>Average Grade</th>
+					<th>Curriculum / Occupation</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			
+			<tbody class="middle-align" >
+			
+				<tr ng-repeat="cand in data.candidacies">
+					<td>
+						<input type="checkbox" class="cbr">
+					</td>
+					<td>{{cand.state}}</td>
+					<td>{{cand.title}}</td>
+					<td>{{cand.description}}</td>
+					<td>
+                       
+						<a href="" class="btn btn-secondary btn-sm btn-icon icon-left">
+							Edit
+						</a>
+						
+                        <a class="btn btn-danger btn-sm btn-icon icon-left" popover-trigger="mouseenter" popover-                                           placement="bottom" popover-                                      title="DELETE" popover="Are You sure                               you want to Delete this candidacie!">Delete</a>
+						<!--<a href="" ng-click="openModal('modal-3', null, 'static');" class="btn btn-danger btn-sm btn-icon                             icon-left">
+							Delete
+						</a>-->
+                            
+						<a ui-sref="app.recruitment-Detail" class="btn btn-info btn-sm btn-icon icon-left">
+							Profile
+						</a>
+					</td>
+				</tr>
+				
+			</tbody>
+		</table>
+		
+	</div>
+</div>
+		
+	</div>
+</div>
