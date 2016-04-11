@@ -8,6 +8,7 @@ angular.module('xenon.services', [])
     .factory('RendezVous',function($resource){
          return $resource('http://localhost:18080/ERP.PI-web/rest/appoitment/all',{})
          })
+<<<<<<< HEAD
 		 
     .factory('Events', function ($resource) {
     
@@ -33,6 +34,8 @@ angular.module('xenon.services', [])
     
     return $resource('http://localhost:3000/PIWEB/geekandcode/delete/events');
 })
+=======
+>>>>>>> origin/master
 
 
     .service('$menuItems', function()

@@ -519,6 +519,7 @@ if('webkitSpeechRecognition' in window)
 		$scope.bigTotalItems = 175;
 		$scope.bigCurrentPage = 1;
 	}).
+<<<<<<< HEAD
 	
 	.controller('EventCtrl', function($scope, Events) {
     $scope.events = Events.query();
@@ -554,6 +555,8 @@ if('webkitSpeechRecognition' in window)
 
     })
 	
+=======
+>>>>>>> origin/master
 	controller('LayoutVariantsCtrl', function($scope, $layout, $cookies)
 	{
 		$scope.opts = {
