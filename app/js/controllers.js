@@ -203,9 +203,25 @@ controller("ProductListController",function($scope, productFactory){
   
 }).
 
+//ListAd
+controller("AdList",function($scope, $http){
 
 
-	controller('MainCtrl', function($scope, $rootScope, $location, $layout, $layoutToggles, $pageLoadingBar, Fullscreen, $state,AnnyangService,$stateParams)
+	
+	$http.get("http://localhost:3000/ads")
+    .success(function(response) {
+ 
+        $scope.data = response ; 
+        console.log($scope.data);
+ 
+    });
+
+	
+  
+}).
+
+
+controller('MainCtrl', function($scope, $rootScope, $location, $layout, $layoutToggles, $pageLoadingBar, Fullscreen, $state,AnnyangService,$stateParams)
 	{
 if('webkitSpeechRecognition' in window)
 		
