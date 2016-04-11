@@ -100,7 +100,8 @@ var input = document.getElementById('location');
     $rootScope.a=actionBourses.query();
     
       
-}).
+})
+    .
 controller('MapCtrl', function ($scope) {
  var locations = [
       ["Ariana", "Gouvernorat de l'Ariana, Tunisie"],

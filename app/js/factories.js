@@ -63,6 +63,7 @@ app.factory('actionBourse',function($resource) {
 app.factory('actionBourses',function($resource) {
              return $resource('http://localhost:1337/offre');
     });
+
 app.factory('storeFactory', function($resource){
     return {
        resource : function()
