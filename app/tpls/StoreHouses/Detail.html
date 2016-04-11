@@ -1,0 +1,105 @@
+<div class="row">
+
+
+
+
+    <!-- Bordered panel -->
+    <div class="panel panel-default panel-border">
+        <div class="panel-heading">
+            Details
+        </div>
+
+        <div class="panel-body">
+
+            <h1>
+                Adress :
+
+                <small>Secondary text</small>
+            </h1>
+
+            <h1>
+                Capacity :
+
+                <small>Secondary text</small>
+            </h1>
+
+        </div>
+    </div>
+
+    <!-- Tabbed panel -->
+
+
+
+
+
+    <!-- Tabbed panel 2 -->
+    <div ng-init="tabbed_panel_2_active = 2" class="panel panel-default panel-tabs"><!-- Add class "collapsed" to minimize the panel -->
+        <div class="panel-heading">
+            <h3 class="panel-title">More</h3>
+
+            <div class="panel-options">
+
+                <ul class="nav nav-tabs">
+                    <li ng-class="{'active': tabbed_panel_2_active == 1}">
+                        <a href="" ng-click="tabbed_panel_2_active = 1"> Statistic About Materials Stored</a>
+                    </li>
+                    <li ng-class="{'active': tabbed_panel_2_active == 2}">
+                        <a href="" ng-click="tabbed_panel_2_active = 2">GOOGLE MAPS</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="panel-body">
+
+            <div class="tab-content">
+
+                <div class="tab-pane" ng-class="{'active': tabbed_panel_2_active == 1}" ng-controller="RadarCtrl">
+                    <canvas id="radar" class="chart chart-radar"
+                            chart-data="data" chart-labels="labels">
+                    </canvas>
+                </div>
+
+                <div class="tab-pane" ng-class="{'active': tabbed_panel_2_active == 2}">
+                    <div id="map" style="width: 100%; height: 300px; position: relative; overflow: hidden; transform: translateZ(0px); background-color: rgb(229, 227, 223);"></div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: { lat: -34.397, lng: 150.644 }
+        });
+        var geocoder = new google.maps.Geocoder();
+
+        geocodeAddress(geocoder, map);
+
+    }
+
+    function geocodeAddress(geocoder, resultsMap) {
+        var address = "Ben Arous";
+        geocoder.geocode({ 'address': address }, function (results, status) {
+            if (status === google.maps.GeocoderStatus.OK) {
+                resultsMap.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    map: resultsMap,
+                    position: results[0].geometry.location
+                });
+            } else {
+                alert('Geocode was not successful for the following reason: ' + status);
+            }
+        });
+    }
+
+</script>
+

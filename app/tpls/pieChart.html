@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="pieChart.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.19/webcomponents-lite.min.js">  </script>
+    <link rel="import" href="https://cdn.vaadin.com/vaadin-charts/3.0.0-alpha7/charts-component.html">        
+  </head>
+  <body ng-app="PieChartsModule">
+    <div id="chart" ng-controller="PieChartsCtrl">
+      <pie-with-legend data="chartData"></pie-with-legend>
+    </div>
+    <script type="text/html" id="tmpl-pie-with-legend">
+      <vaadin-pie-chart>
+        <title>Trips</title>
+        <subtitle>2015</subtitle>
+        <tooltip point-format="<b>{point.percentage:.1f}%</b>"></tooltip>
+        <plot-options>
+          <pie allow-point-select="true" show-in-legend="true" cursor="pointer">
+              <data-labels enabled="true" format="{point.name}: {point.y:.1f} %"></data-labels>
+          </pie>
+        </plot-options>
+        <data-series name="Trips"></data-series>
+      </vaadin-pie-chart>
+    </script>
+  </body>
+</html><html>
+  <head>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="pieChart.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.19/webcomponents-lite.min.js">  </script>
+    <link rel="import" href="https://cdn.vaadin.com/vaadin-charts/3.0.0-alpha7/charts-component.html">        
+  </head>
+  <body ng-app="PieChartsModule">
+    <div id="chart" ng-controller="PieChartsCtrl">
+      <pie-with-legend data="chartData"></pie-with-legend>
+    </div>
+    <script type="text/html" id="tmpl-pie-with-legend">
+      <vaadin-pie-chart>
+        <title>Trips</title>
+        <subtitle>2015</subtitle>
+        <tooltip point-format="<b>{point.percentage:.1f}%</b>"></tooltip>
+        <plot-options>
+          <pie allow-point-select="true" show-in-legend="true" cursor="pointer">
+              <data-labels enabled="true" format="{point.name}: {point.y:.1f} %"></data-labels>
+          </pie>
+        </plot-options>
+        <data-series name="Trips"></data-series>
+      </vaadin-pie-chart>
+    </script>
+  </body>
+</html>

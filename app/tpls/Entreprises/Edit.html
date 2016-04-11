@@ -1,0 +1,154 @@
+
+
+	<page-title ng-if="layoutOptions.pageTitles" title="Add Member" description="Interface for adding new members using our styled forms."></page-title>
+
+
+
+<form method="post">
+	<div class="panel panel-headerless">
+		<div class="panel-body">
+
+			<div class="member-form-add-header">
+				<div class="row">
+					<div class="col-md-2 col-sm-4 pull-right-sm">
+
+						<div class="action-buttons">
+							<button type="submit" class="btn btn-block btn-secondary">Save Changes</button>
+							<button type="reset" class="btn btn-block btn-gray">Reset to Default</button>
+						</div>
+
+					</div>
+					<div class="col-md-10 col-sm-8">
+
+						<div class="user-img">
+							<img src="assets/images/user-4.png" class="img-circle" alt="user-pic" />
+						</div>
+						<div class="user-name">
+							<a href="">BDeco</a>
+							<span>Lucratif</span>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="member-form-inputs">
+				<div class="row">
+					<div class="col-sm-3">
+						<label class="control-label" for="name">Name</label>
+					</div>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="username" id="username" value="BDeco" disabled />
+					</div>
+				</div>
+
+                <div class="row">
+					<div class="col-sm-3">
+						<label class="control-label" for="logo">LOgO</label>
+					</div>
+					<div class="col-sm-9">
+                        
+                    <input type="file" class="form-control" id="field-4" value="No Logo Chosen">
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3">
+						<label class="control-label" for="email">E-Mail</label>
+					</div>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="name" id="name" value="BDeco@BDeco.tn" />
+					</div>
+				</div>
+                
+                <div class="row">
+					<div class="col-sm-3">
+						<label class="control-label" for="adress">Adress</label>
+					</div>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="name" id="name" value="Residence Chaaben Trabelsi Aouina" />
+					</div>
+				</div>
+   
+                
+                
+                
+                
+                
+                <div class="row">
+					<div class="col-sm-3">
+						<label class="control-label" for="name">Head Office</label>
+					</div>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="office" id="name" value="Mont Plaisir" />
+					</div>
+				</div>
+                
+                
+				<div class="row">
+					<div class="col-sm-3">
+						<label class="control-label" for="birthdate">Date of Foundation</label>
+					</div>
+					<div class="col-sm-9">
+						<div class="input-group">
+							<input type="text" class="form-control datepicker" name="birthdate" data-format="dd-mm-yyyy" value="04-12-1989">
+
+							<div class="input-group-addon">
+								<a href=""><i class="linecons-calendar"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-3">
+						<label class="control-label">Sector</label>
+					</div>
+					<div class="col-sm-9">
+						<script type="text/javascript">
+							jQuery(document).ready(function($)
+							{
+								$("#s2example-1").select2({
+									placeholder: 'Select your country...',
+									allowClear: true
+								}).on('select2-open', function()
+								{
+									// Adding Custom Scrollbar
+									$(this).data('select2').results.addClass('overflow-hidden').perfectScrollbar();
+								});
+
+							});
+						</script>
+
+						<select class="form-control" id="s2example-1">
+							<option></option>
+							<optgroup label="Télécommuncation">
+								<option>Réseau</option>
+								<option>Sécurité</option>
+								<option>Langues</option>
+								
+							</optgroup>
+							
+						</select>
+
+					</div>
+				</div>
+                <div  class="row">
+                        <div class="col-sm-3">
+                        <label class="control-label">Description</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" cols="5" id="field-5"></textarea>
+                        </div>
+                
+                </div>
+
+
+
+
+			</div>
+
+		</div>
+	</div>
+</form>

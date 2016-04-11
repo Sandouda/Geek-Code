@@ -1,0 +1,88 @@
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">List Of StoreHouses</h3>
+
+
+        <div class="panel-options">
+            <a href="" data-toggle="panel">
+                <span class="collapse-icon">&ndash;</span>
+                <span class="expand-icon">+</span>
+            </a>
+            <a href="" data-toggle="remove">
+                &times;
+            </a>
+        </div>
+    </div>
+    <div class="panel-body">
+
+        <a ui-sref="app.StoreHouses-Create" class="btn btn-info btn-icon btn-icon-standalone btn-lg ">
+            <i class="fa-plus"></i>
+            <span>New</span>
+        </a>
+        <br>
+        <br>
+
+        <script type="text/javascript">
+            jQuery(document).ready(function($)
+            {
+                $("#example-4").dataTable({
+                    dom: "<'row'<'col-sm-5'l><'col-sm-7'Tf>r>"+
+                    "t"+
+                    "<'row'<'col-xs-6'i><'col-xs-6'p>>",
+                    tableTools: {
+                        sSwfPath: "assets/js/datatables/tabletools/copy_csv_xls_pdf.swf"
+                    }
+                });
+            });
+        </script>
+
+        <table class="table table-bordered table-striped" id="example-4">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Adress</th>
+                <th>Capacity</th>
+                <th>Action</th>
+
+            </tr>
+            </thead>
+
+            <tfoot>
+            <tr>
+                <th>#</th>
+                <th>Adress</th>
+                <th>Capacity</th>
+                <th>Action</th>
+
+            </tr>
+            </tfoot>
+
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>System Architect</td>
+                <td>System Architect</td>
+                <td>
+                    <a ui-sref="app.StoreHouses-Edit" class="btn btn-secondary btn-sm btn-icon icon-left" ng-click="openModal('modal-1')" >
+                        Edit
+                    </a>
+
+                    <a href="" class="btn btn-danger btn-sm btn-icon icon-left">
+                    Delete
+                    </a>
+                    <a ui-sref="app.StoreHouses-Detail" class="btn btn-danger btn-sm btn-icon icon-left">
+                        Detail
+                    </a>
+
+                </td>
+
+            </tr>
+
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
