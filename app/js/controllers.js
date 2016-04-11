@@ -219,6 +219,46 @@ controller("AdList",function($scope, $http){
 	
   
 }).
+//Create an ad
+controller("AdCreate",function($scope, $http){
+
+		Object.toparams = function ObjecttoParams(obj) {
+    var p = [];
+    for (var key in obj) {
+        p.push(key + '=' + encodeURIComponent(obj[key]));
+    }
+    return p.join('&');
+};
+        $scope.addAd = function () {
+
+            var data = {
+             "description" : document.getElementById('desc').value,
+             "purpose" : document.getElementById('purp').value,
+             "budget" : document.getElementById('budg').value,
+             "audience" : document.getElementById('aud').value,
+             "category" : document.getElementById('cat').value,
+            }       
+            var config = {
+                headers : {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            }
+			
+			
+
+            $http.post('http://localhost:3000/ads', Object.toparams(data), config)
+            .success(function (data, status, headers, config) {
+            alert("Success message");
+              $scope.data = data ; 
+	
+            
+            }); 
+	
+        }
+    
+    
+    
+}).
 
 
 controller('MainCtrl', function($scope, $rootScope, $location, $layout, $layoutToggles, $pageLoadingBar, Fullscreen, $state,AnnyangService,$stateParams)
