@@ -478,7 +478,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, ASS
 				]);
 			},
 		},
-        controller: 'UIModalsCtrl'
+       controller: 'AdList'
 
 	}).
     state('app.Idea-Create', {
@@ -491,7 +491,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, ASS
 				]);
 			},
 		},
-        controller: 'UIModalsCtrl'
+         controller: 'AdCreate'
 
 	}).
      
