@@ -4,24 +4,30 @@
 	</div>
 	<div class="panel-body">
         
-        <div class="row">
-			<div class="col-md-5">
+        
+			<div class="col-md-8">
 				
 				<h2><strong class="text-primary">Par: <span>Nadal</span></strong></h2>
                 
 				<br />
 				<br />
-				<div data-ng-repeat="x in actionbourse" class="col-sm-20 col-md-11 col-xs-6">
-				<div class="col-md-4 col-sm-4 col-xs-6">
+
+
+               <div class="album-images row">
+              	<div data-ng-repeat="x in actionbourse"> 
+           <div class="col-md-6 col-sm-8 col-xs-9">
                     <div class="album-image">
-                        <class="thumb" data-action="detail">
-                         <img src="assets/images/{{x.logo}}" class="img-responsive" />
-                        </a>
+						
+                        <a href="" class="thumb" data-action="edit">
+							 <a href="#/app/actionBourse-details/{{x._id}}" ng-click="openModal('modal-1')">
+                          <img src="assets/images/{{x.logo}}" class="img-responsive" style="width:264px; height:164px; border:none;" />
+                       
 
-                      <a href="#/app/actionBourse-details/{{x._id}}" ng-click="openModal('modal-1')">
-                          <span class="btn btn-info btn-icon btn-icon-standalone btn-lg ">{{x.titre}}</span>
-                        </a>
-
+                     
+                            <span class="btn btn-info btn-icon btn-icon-standalone btn-lg ">{{x.titre}}</span>
+                           
+							 </a></a>
+						</a>
                         <div class="image-options">
                             <a href="" data-action="edit"><i class="fa-pencil"></i></a>
                             <a href="" data-action="trash"><i class="fa-trash"></i></a>
@@ -32,3 +38,7 @@
                         </div>
                     </div>
                 </div>
+                </div>
+            </div>          
+
+        </div>
