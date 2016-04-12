@@ -101,10 +101,14 @@ var input = document.getElementById('location');
     
       
 })
-.controller("actionDetailsController",function($scope, $stateParams,actionDetails) {
+.controller("actionDetailsController",function($scope, $stateParams,actionDetails, $http) {
    
-    $scope.detail= actionDetails.get({id: $stateParams.id});
-     
+	
+  $http.get ("http://localhost:1337/Offre/"+$stateParams.id)
+  .then (function (data){
+  $scope.data = data.data; 
+	  console.log($scope.data);
+  });
 }) 
 .controller('MapCtrl', function ($scope) {
  var locations = [

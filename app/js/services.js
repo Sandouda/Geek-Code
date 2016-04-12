@@ -129,7 +129,7 @@ angular.module('xenon.services', [])
 			// Subitems of Materials
 	        actionBourse.addItem('actionBourse',   '-/list' )
 			actionBourses.addItem('actionBourse',   '-/detail' )
-			actionDetails.addItem('actionDetails',   '-/details' )
+			actionDetails.addItem('actionBourse',   '-/details' )
 
 			Materials.addItem('List of Materials','-/list')
             // Subitems of StoreHouses
