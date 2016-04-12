@@ -119,7 +119,11 @@ app.config(function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, ASS
 			templateUrl: appHelper.templatePath('update-highlights'),
 		})
 
-	
+		  .state('app.actionDetails', {
+		url: '/actionBourse-details/:id',
+		templateUrl: appHelper.templatePath('actionBourse/details'),
+		controller: 'actionDetailsController',
+	})
 	  .state('app.actionBourse', {
 		url: '/actionBourse-list',
 		templateUrl: appHelper.templatePath('actionBourse/list'),
@@ -132,11 +136,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, ASS
 	}).
      state('app.Statistics', {
 			url: '/Statistics',
-<<<<<<< HEAD
-			templateUrl: appHelper.templatePath('Events Chart'),
-=======
 			templateUrl: appHelper.templatePath('Statistics'),
->>>>>>> origin/master
 		}).
 	 state('app.profil', {
 			url: '/profil',
@@ -313,14 +313,6 @@ app.config(function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, ASS
 
 
 	}).
-<<<<<<< HEAD
-    
-    state('app.pieChart', {
-			url: '/pieChart',
-			templateUrl: appHelper.templatePath('EventsCharts'),
-		}).
-=======
->>>>>>> origin/master
 
     //Appointments
     state('app.Appointments', {
@@ -478,7 +470,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, ASS
 				]);
 			},
 		},
-       controller: 'AdList'
+        controller: 'UIModalsCtrl'
 
 	}).
     state('app.Idea-Create', {
@@ -491,7 +483,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, ASS
 				]);
 			},
 		},
-         controller: 'AdCreate'
+        controller: 'UIModalsCtrl'
 
 	}).
      

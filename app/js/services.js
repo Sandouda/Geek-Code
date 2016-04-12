@@ -8,34 +8,6 @@ angular.module('xenon.services', [])
     .factory('RendezVous',function($resource){
          return $resource('http://localhost:18080/ERP.PI-web/rest/appoitment/all',{})
          })
-<<<<<<< HEAD
-		 
-    .factory('Events', function ($resource) {
-    
-    return $resource('http://localhost:3000/PIWEB/geekandcode/events');
-})
-
-.factory('Event', function ($resource) {
-    
-    return $resource('http://localhost:3000/PIWEB/geekandcode/events/:idEvent');
-})
-
-.factory('Event', function ($resource) {
-    
-    return $resource('http://localhost:3000/PIWEB/geekandcode/add/event');
-})
-
-.factory('Event', function ($resource) {
-    
-    return $resource('http://localhost:3000/PIWEB/geekandcode/edit/events');
-})
-
-.factory('Event', function ($resource) {
-    
-    return $resource('http://localhost:3000/PIWEB/geekandcode/delete/events');
-})
-=======
->>>>>>> origin/master
 
 
     .service('$menuItems', function()
@@ -157,6 +129,8 @@ angular.module('xenon.services', [])
 			// Subitems of Materials
 	        actionBourse.addItem('actionBourse',   '-/list' )
 			actionBourses.addItem('actionBourse',   '-/detail' )
+			actionDetails.addItem('actionDetails',   '-/details' )
+
 			Materials.addItem('List of Materials','-/list')
             // Subitems of StoreHouses
 			StoreHouses.addItem ('List of StoreHouses', '-/list')

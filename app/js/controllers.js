@@ -97,12 +97,16 @@ var input = document.getElementById('location');
 .controller("actionBoursesController",function($scope, actionBourses,$rootScope){
 	 
     $scope.actionbourse=actionBourses.query();
-    $rootScope.a=actionBourses.query();
+     $rootScope.a=actionBourses.query();
     
       
 })
-    .
-controller('MapCtrl', function ($scope) {
+.controller("actionDetailsController",function($scope, $stateParams,actionDetails) {
+   
+    $scope.detail= actionDetails.get({id: $stateParams.id});
+     
+}) 
+.controller('MapCtrl', function ($scope) {
  var locations = [
       ["Ariana", "Gouvernorat de l'Ariana, Tunisie"],
       ["Résidence Nesrine 2", "La Petite Ariana, 2083 Tunisie, Cebalat Ben Ammar, Gouvernorat de l'Ariana, Tunisie"],
@@ -204,65 +208,9 @@ controller("ProductListController",function($scope, productFactory){
   
 }).
 
-//ListAd
-controller("AdList",function($scope, $http){
 
 
-	
-	$http.get("http://localhost:3000/ads")
-    .success(function(response) {
- 
-        $scope.data = response ; 
-        console.log($scope.data);
- 
-    });
-
-	
-  
-}).
-//Create an ad
-controller("AdCreate",function($scope, $http){
-
-		Object.toparams = function ObjecttoParams(obj) {
-    var p = [];
-    for (var key in obj) {
-        p.push(key + '=' + encodeURIComponent(obj[key]));
-    }
-    return p.join('&');
-};
-        $scope.addAd = function () {
-
-            var data = {
-             "description" : document.getElementById('desc').value,
-             "purpose" : document.getElementById('purp').value,
-             "budget" : document.getElementById('budg').value,
-             "audience" : document.getElementById('aud').value,
-             "category" : document.getElementById('cat').value,
-            }       
-            var config = {
-                headers : {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                }
-            }
-			
-			
-
-            $http.post('http://localhost:3000/ads', Object.toparams(data), config)
-            .success(function (data, status, headers, config) {
-            alert("Success message");
-              $scope.data = data ; 
-	
-            
-            }); 
-	
-        }
-    
-    
-    
-}).
-
-
-controller('MainCtrl', function($scope, $rootScope, $location, $layout, $layoutToggles, $pageLoadingBar, Fullscreen, $state,AnnyangService,$stateParams)
+	controller('MainCtrl', function($scope, $rootScope, $location, $layout, $layoutToggles, $pageLoadingBar, Fullscreen, $state,AnnyangService,$stateParams)
 	{
 if('webkitSpeechRecognition' in window)
 		
@@ -576,44 +524,6 @@ if('webkitSpeechRecognition' in window)
 		$scope.bigTotalItems = 175;
 		$scope.bigCurrentPage = 1;
 	}).
-<<<<<<< HEAD
-	
-	.controller('EventCtrl', function($scope, Events) {
-    $scope.events = Events.query();
-})
-.controller('EventCtrl', function($scope, $stateParams, Event) {
-    $scope.event= Event.get({idEvent: $stateParams.idEvent});
-})
-.controller("EventAddCtrl", function ($scope, $http, $state) {
-
-        $scope.AddData = function () {
-            var data = {
-                name: $scope.name,
-                startdate: $scope.startdate,
-                enddate: $scope.enddate,
-                duration: $scope.duration,
-                description: $scope.description                
-            };
-            var config = {
-                headers : {
-                    'Content-Type': 'application/json;'
-                }
-            };
-
-            $http.post('http://localhost:3000/PIWEB/geekandcode/add/event', data, config)
-            .success(function (data, status, headers) {
-                $scope.ServerResponse = data;
-               
-            })
-            .error(function (data, status, header, config) {
-                console.log(data);
-            });
-        };
-
-    })
-	
-=======
->>>>>>> origin/master
 	controller('LayoutVariantsCtrl', function($scope, $layout, $cookies)
 	{
 		$scope.opts = {

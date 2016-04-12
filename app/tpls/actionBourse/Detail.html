@@ -11,131 +11,24 @@
                 
 				<br />
 				<br />
-				
-				<div class="img-container">
-					<img src="http://www.alliancentreprise.fr/photos/logo-01.jpg" class="img-responsive"  width="500" height="900"/>
-				</div>
-                
-				
-			</div>
-			<div class="col-md-7">
 				<div data-ng-repeat="x in actionbourse" class="col-sm-20 col-md-11 col-xs-6">
-				<strong class="text-primary">Informatique, Commerce, Marketing, Developpement des affaires, Administration</strong>
-				<br />
-				<br />
-				<div class="img-shade">
-					<div id="img-preview" class="img-preview"></div>
-				</div>
-<<<<<<< HEAD
-                <p class="hidden-xs hidden-sm">{{x.titre}}</p>
-=======
-                <span class="btn btn-info btn-icon btn-icon-standalone btn-lg ">{{x.titre}}</span>
->>>>>>> origin/master
-                </br>
-           <h3><span class="btn btn-secondary btn-sm btn-icon icon-left">Description:</span></h3> <p>{{x.description}}<br>
-				<h3><span  class="btn btn-danger btn-sm btn-icon icon-left" >Profil:</span></h3> <p>{{x.profil}}<br>
-              <h3><span class="btn btn-icon btn-blue">Salaire:</span></h3> <p>{{x.salaire}}<br>
-				  <h3><span  class="btn btn-icon btn-red">Lieu:</span></h3> <p>{{x.lieu}}<br>
-				 <h3><span  class="btn btn-icon btn-info">Date:</span></h3> <p>{{x.date}}<br>
-				
-			
-				
-			
-        <br>
-			<br>
-      	
-		<div class="xe-widget xe-conversations">
-			<div class="xe-bg-icon">
-				<i class="linecons-comment"></i>
-			</div>
-			<div class="xe-header">
-				
-				<div class="xe-label">
-					<h3>
-						Comments
-						
-					</h3>
-					<br> 
-				<br> 
-			
-					<div class="story-options-links">
-							<a href="">
-								<i class="linecons-heart"></i>
-								Like 
-								<span>(3)</span>
-							</a>
-							
-							<a href="">
-								<i class="linecons-comment"></i>
-								Comments
-								<span>(5)</span>
-							</a>
-						</div>
-	
-				</div>
-				
-			</div>
-				</div>
-			<div class="xe-body">
-									
-				
-				<ul class="list-unstyled">
-					<li>
-						<div class="xe-comment-entry">
-							<a href="" class="xe-user-img">
-								<img src="assets/images/user-2.png" class="img-circle" width="40">
-							</a>
-							
-							<div class="xe-comment">
-								<a href="" class="xe-user-name">
-									<strong>Jack Gates</strong>
-								</a>
-								
-								<p>In it except to so temper mutual tastes mother. Interested cultivated its continuing now yet are. <br>Out interested acceptance our partiality affronting unpleasant why add. Esteem garden me...</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="xe-comment-entry">
-							<a href="" class="xe-user-img">
-								<img src="assets/images/user-5.png" class="img-circle" width="40">
-							</a>
-							
-							<div class="xe-comment">
-								<a href="" class="xe-user-name">
-									<strong>Arlind Nushi</strong>
-									<span class="label label-secondary">5</span>
-								</a>
-								
-								<p>Age sold some full like rich new. Amounted repeated as believed in confined juvenile.</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="xe-comment-entry">
-							<a href="" class="xe-user-img">
-								<img src="assets/images/user-4.png" class="img-circle" width="40">
-							</a>
-							
-							<div class="xe-comment">
-								<a href="" class="xe-user-name">
-									<strong>Bryan Green</strong>
-								</a>
-								
-								<p>Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.</p>
-							</div>
-						</div>
-					</li>
-				</ul>
-				
-			</div>
-			<div class="xe-footer">
-				<a href="">View All</a>
-			</div>
-		</div>	
-		
-		</div>
-		</div>
-        
-</div>
-</div>
+				<div class="col-md-4 col-sm-4 col-xs-6">
+                    <div class="album-image">
+                        <class="thumb" data-action="detail">
+                         <img src="assets/images/{{x.logo}}" class="img-responsive" />
+                        </a>
+
+                      <a href="#/app/actionBourse-details/{{x._id}}}" ng-click="openModal('modal-1')">
+                          <span class="btn btn-info btn-icon btn-icon-standalone btn-lg ">{{x.titre}}</span>
+                        </a>
+
+                        <div class="image-options">
+                            <a href="" data-action="edit"><i class="fa-pencil"></i></a>
+                            <a href="" data-action="trash"><i class="fa-trash"></i></a>
+                        </div>
+
+                        <div class="image-checkbox">
+                            <input type="checkbox" class="cbr" />
+                        </div>
+                    </div>
+                </div>
